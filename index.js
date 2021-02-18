@@ -1,4 +1,5 @@
 const http = require("http");
+const PORT = process.env.PORT || 8000;
 
 const url = "http://www.omdbapi.com/?s=lord+of+the+rings&apikey=33bea0dc";
 
@@ -41,5 +42,5 @@ function createServer(data) {
       }
       response.end();
     })
-    .listen(8000);
+    .listen(PORT);
 }
